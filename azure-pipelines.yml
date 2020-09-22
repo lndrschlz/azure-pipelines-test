@@ -15,14 +15,16 @@ steps:
     ls -la
   displayName: 'Run a one-line script'
   target:
-   container: maven
+   container: 867cc781-1fbd-415a-9cbf-b4277dc02168
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
+
 resources:
- containers:
-   - container: maven
-     image: maven:3.6-openjdk-11
+  containers:
+  - container: 867cc781-1fbd-415a-9cbf-b4277dc02168
+    image: maven:3.6-jdk-8
+ 
