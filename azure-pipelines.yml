@@ -15,7 +15,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
+- bash: |
+    echo Hello, world!
+    ls -la
   displayName: 'Run a one-line script'
   target:
    container: maven
