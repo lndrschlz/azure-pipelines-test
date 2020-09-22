@@ -6,12 +6,19 @@
 trigger:
 - master
 
+resources:
+ containers:
+   - container: maven
+     image: maven:3.6-openjdk-11
+
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+  target:
+   container: maven
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
